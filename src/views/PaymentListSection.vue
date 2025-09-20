@@ -2,7 +2,7 @@
   <div>
     <div class="flex justify-between items-center mb-4">
       <h2 class="text-xl font-bold">Payment Management</h2>
-      <router-link to="/payments/new" class="bg-black text-white px-4 py-2 rounded">+ New Payment</router-link>
+      <router-link to="/payments/new" class="inline-flex items-center px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-medium rounded-lg hover:from-blue-600 hover:to-purple-600 transition-all duration-200 shadow-sm">+ New Payment</router-link>
     </div>
 
     <div class="flex space-x-4 mb-4">

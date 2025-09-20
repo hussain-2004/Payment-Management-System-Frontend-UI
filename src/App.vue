@@ -9,10 +9,12 @@ export default {
 </script>
 
 <template>
-  <div>
+  <div class="min-h-screen bg-gray-50">
     <Navbar />
-    <main class="p-6 bg-gray-50 min-h-screen">
-      <router-view />
+    <main class="px-6 py-8">
+      <div class="max-w-7xl mx-auto">
+        <router-view />
+      </div>
     </main>
   </div>
 </template>

@@ -18,6 +18,7 @@ export default createStore({
       mutations: {
         addUser(state, user) {
           user.id = state.list.length ? Math.max(...state.list.map(u => u.id)) + 1 : 1
+          user.createdAt = new Date().toISOString().split('T')[0] // Add current date
           state.list.push(user)
           saveToLocalStorage("pms_users", state.list)
         },
@@ -39,7 +40,12 @@ export default createStore({
       state: () => ({ list: loadFromLocalStorage("pms_payments", initialPayments) }),
       mutations: {
         addPayment(state, payment) {
-          payment.id = state.list.length ? Math.max(...state.list.map(p => p.id)) + 1 : 1
+          // Generate numeric ID for payments
+          const numericIds = state.list
+            .map(p => typeof p.id === 'number' ? p.id : 0)
+            .filter(id => id > 0)
+          payment.id = numericIds.length ? Math.max(...numericIds) + 1 : 1
+          payment.createdAt = new Date().toISOString()
           state.list.push(payment)
           saveToLocalStorage("pms_payments", state.list)
         },
