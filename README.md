@@ -1,6 +1,6 @@
 # 💳 Payment Management System
 
-A modern, comprehensive web-based payment management system built with Vue 3, providing powerful tools for managing users, transactions, and financial operations in a business environment.
+A web-based payment management system built with Vue, providing powerful tools for managing users, transactions, and financial operations in a business environment.
 
 ![Dashboard](./src/assets/screenshots/DASHBOARD.png)
 
@@ -37,7 +37,6 @@ A modern, comprehensive web-based payment management system built with Vue 3, pr
 ```bash
 # Clone the repository
 git clone https://github.com/hussain-2004/Payment-Management-System-Frontend-UI.git
-cd Payment-Management-System-Frontend-UI
 
 # Install dependencies
 npm install
@@ -53,17 +52,9 @@ npm run dev
 ```bash
 # Development
 npm run dev              # Start development server
-npm run build           # Build for production
-npm run preview         # Preview production build
 
 # Testing
 npm test               # Run unit tests
-npm run test:watch     # Run tests in watch mode
-npm run test:coverage  # Generate coverage report
-
-# Code Quality
-npm run lint           # Run ESLint
-npm run lint:fix       # Fix ESLint issues
 ```
 
 ## 🏗️ Project Structure
