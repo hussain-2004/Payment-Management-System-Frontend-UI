@@ -1,6 +1,6 @@
 import { describe, it, expect } from '@jest/globals';
 import { mount } from '@vue/test-utils';
-import PaymentTableComponent from '../components/PaymentTableComponent.vue';
+import PaymentTableComponent from '@/components/PaymentTableComponent.vue';
 
 describe('PaymentTableComponent.vue', () => {
   const mockPayments = [

@@ -1,6 +1,6 @@
 import { describe, it, expect, beforeEach } from '@jest/globals';
 import { mount } from '@vue/test-utils';
-import PaymentInitiationForm from '../views/PaymentInitiationForm.vue';
+import PaymentInitiationForm from '@/views/PaymentInitiationForm.vue';
 
 describe('PaymentInitiationForm.vue', () => {
   const mockStore = {

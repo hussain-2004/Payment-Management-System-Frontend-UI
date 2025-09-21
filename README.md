@@ -71,7 +71,6 @@ src/
 ├── data/            # Sample data
 ├── router/          # Route configuration
 ├── store/           # Vuex store
-├── test/            # Unit tests
 ├── views/           # Page components
 │   ├── DashboardPage.vue
 │   ├── LoginPage.vue
@@ -83,4 +82,12 @@ src/
 │   └── UserListPage.vue
 ├── App.vue          # Root component
 └── main.js          # Entry point
+
+test/                # Unit tests
+├── DashboardPage.test.js
+├── PaymentDetailsInformation.test.js
+├── PaymentInitiationForm.test.js
+├── PaymentListSection.test.js
+├── PaymentTableComponent.test.js
+└── UserTableComponent.test.js
 ```

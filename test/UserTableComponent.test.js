@@ -1,6 +1,6 @@
 import { describe, it, expect } from '@jest/globals';
 import { mount } from '@vue/test-utils';
-import UserTableComponent from '../components/UserTableComponent.vue';
+import UserTableComponent from '@/components/UserTableComponent.vue';
 
 describe('UserTableComponent.vue', () => {
   const mockUsers = [

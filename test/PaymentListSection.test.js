@@ -1,6 +1,6 @@
 import { describe, it, expect } from '@jest/globals';
 import { mount, shallowMount } from '@vue/test-utils';
-import PaymentListSection from '../views/PaymentListSection.vue';
+import PaymentListSection from '@/views/PaymentListSection.vue';
 
 describe('PaymentListSection.vue', () => {
   const mockStore = {

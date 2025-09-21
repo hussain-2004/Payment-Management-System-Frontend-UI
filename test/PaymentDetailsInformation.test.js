@@ -1,6 +1,6 @@
 import { describe, it, expect } from '@jest/globals';
 import { mount } from '@vue/test-utils';
-import PaymentDetailsInformation from '../views/PaymentDetailsInformation.vue';
+import PaymentDetailsInformation from '@/views/PaymentDetailsInformation.vue';
 
 describe('PaymentDetailsInformation.vue', () => {
   const mockRoute = { params: { id: 'pay_001' } };
