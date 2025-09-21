@@ -24,9 +24,12 @@
       <div class="grid grid-cols-2 gap-4">
         <div>
           <label class="block mb-2 font-medium text-gray-700">Currency</label>
-          <select v-model="form.currency" class="border border-gray-300 rounded-lg w-full px-4 py-3 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors">
-            <option>USD</option>
-            <option>EUR</option>
+          <select 
+            v-model="form.currency" 
+            data-testid="currency"
+            class="border border-gray-300 rounded-lg w-full px-4 py-3 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
+          >
+            <option>INR</option>
           </select>
         </div>
         <div>
@@ -93,7 +96,7 @@ export default {
         id: null,
         userId: null,
         amount: "",
-        currency: "USD",
+        currency: "INR",
         status: "pending",
         category: "payment",
         reference: "",

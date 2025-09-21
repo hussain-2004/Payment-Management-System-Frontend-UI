@@ -40,14 +40,18 @@ export default createStore({
       state: () => ({ list: loadFromLocalStorage("pms_payments", initialPayments) }),
       mutations: {
         addPayment(state, payment) {
-          // Generate numeric ID for payments
-          const numericIds = state.list
-            .map(p => typeof p.id === 'number' ? p.id : 0)
-            .filter(id => id > 0)
-          payment.id = numericIds.length ? Math.max(...numericIds) + 1 : 1
-          payment.createdAt = new Date().toISOString()
-          state.list.push(payment)
-          saveToLocalStorage("pms_payments", state.list)
+          // Generate string ID for payments like existing data
+          const existingIds = state.list.map(p => p.id);
+          const numericIds = existingIds
+            .filter(id => typeof id === 'string' && id.startsWith('pay_'))
+            .map(id => parseInt(id.replace('pay_', '')))
+            .filter(num => !isNaN(num));
+          
+          const nextNum = numericIds.length ? Math.max(...numericIds) + 1 : 1;
+          payment.id = `pay_${String(nextNum).padStart(3, '0')}`;
+          payment.createdAt = new Date().toISOString();
+          state.list.push(payment);
+          saveToLocalStorage("pms_payments", state.list);
         },
         updatePayment(state, updatedPayment) {
           const index = state.list.findIndex(p => p.id === updatedPayment.id)

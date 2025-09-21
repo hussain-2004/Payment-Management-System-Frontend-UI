@@ -18,7 +18,7 @@
         </div>
         
         <div class="text-right">
-          <p class="font-semibold text-gray-900">${{ p.amount }}</p>
+          <p class="font-semibold text-gray-900">₹{{ p.amount }}</p>
           <span 
             :class="{
               'text-green-600': p.status === 'completed',

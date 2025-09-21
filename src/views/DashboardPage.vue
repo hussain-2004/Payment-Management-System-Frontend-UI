@@ -7,11 +7,11 @@
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
       <StatsCard title="Active Users" :value="activeUsers" :subtitle="`Total: ${users.length}`" />
       <StatsCard title="Total Payments" :value="payments.length" :subtitle="`${completedCount} completed`" />
-      <StatsCard title="Total Amount" :value="`$${totalAmountCompleted}`" subtitle="Completed payments only" />
+      <StatsCard title="Total Amount" :value="`₹${totalAmountCompleted}`" subtitle="Completed payments only" />
       <StatsCard title="Pending" :value="pendingCount" subtitle="Awaiting processing" />
     </div>
 
-    <div class="grid grid-cols-1 lg:grid-cols-1 gap-8">
+    <div class="space-y-8">
       <RecentPayments :payments="recentPayments" :users="users" />
     </div>
   </div>

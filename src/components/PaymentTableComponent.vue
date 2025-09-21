@@ -30,7 +30,7 @@
               </div>
             </td>
             <td class="px-6 py-4">
-              <span class="font-semibold text-gray-900">${{ p.amount }}</span>
+              <span class="font-semibold text-gray-900">₹{{ p.amount }}</span>
             </td>
             <td class="px-6 py-4">
               <span 
